@@ -1,0 +1,6 @@
+@use '../abstracts/variables' as v;
+header {
+	padding: 10px;
+	border-bottom: 3px solid v.$accentColor;
+	text-align: center;
+}

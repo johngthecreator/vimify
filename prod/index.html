@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"
+		integrity="sha512-L03kznCrNOfVxOUovR6ESfCz9Gfny7gihUX/huVbQB9zjODtYpxaVtIaAkpetoiyV2eqWbvxMH9fiSv5enX7bw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
+	</link>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/keymap/vim.min.js"
+		integrity="sha512-v6XpWWL1+nyfTRat9465C64nLL4fJRpNyeUNw4+DYylwzErWi4RE8Cjw76BEyS8jQbtyTACb3MqxHJpklwc7EA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.0/dist/jspdf.es.min.js"
+		integrity="sha256-oZpyP8KiAPWSf2W5oZYkb4SNSkNmoaCIbiLQoeNGeS8=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="styles.css">
+	<title>vimify - markdown editor</title>
+</head>
+
+<body onload="showVisual()">
+	<header>
+		<h1>vimify</h1>
+	</header>
+	<main>
+		<div class="col1">
+			<nav>
+			<button onclick="eraseMd()">New Draft</button>
+			</nav>
+			<div id="source" onkeypress="mdconvert()">
+			</div>
+		</div>
+		<div class="col2">
+			<nav>
+				<button id="showCode" onclick="showHTML()">HTML</button>
+				<button id="showVis" onclick="showVisual()">Visual</button>
+				<button id="cphtml" onmouseenter="mdconvert()" onclick="copyHtml()">Copy</button>
+				<button id="cpvisual" onmouseenter="mdconvert()" onclick="copyDiv()">Copy</button>
+			</nav>
+			<div id="html">
+				<xmp id="raw-html">
+				</xmp>
+			</div>
+			<div id="output">
+			</div>
+		</div>
+	</main>
+	<script src="func.js"></script>
+</body>
+
+</html>

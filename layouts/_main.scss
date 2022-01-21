@@ -1,0 +1,12 @@
+main {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 100vh;
+}
+
+.col1, .col2 {
+    height: 100vw;
+    width: 50vw;
+    max-width: 50vw;
+}
+

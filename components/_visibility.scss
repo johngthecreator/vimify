@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as v;
+.active {
+	background-color: v.$accentColor;
+	color: v.$bgColor;
+}
+
+.on {
+	display: block;
+}
+
+.off {
+	display: none;
+}
